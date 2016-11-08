@@ -1,0 +1,9 @@
+# idea folder
+.idea
+.vscode
+
+#database
+database/*
+
+#vendors
+node_modules

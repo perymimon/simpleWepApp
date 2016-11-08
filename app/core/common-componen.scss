@@ -1,0 +1,43 @@
+/*common behavior*/
+.ng-touched.ng-invalid, .ng-submitted .ng-invalid{
+  outline:1px solid red;
+  background-color: #e2d3d0;
+}
+
+
+/*common componet*/
+button.main{
+  background-color: #40A8DF;
+  border: none ;
+  border-radius: 3px;
+  color:white;
+  padding: 0.3em;
+  &:active{
+    transform: scale(0.9,0.9);
+  }
+}
+input,textarea{
+  padding: 8px ;
+  resize: none;
+  border:1px solid $base-border-color;
+}
+
+input-filter{
+  display: flex;
+  border: 1px $base-border-color solid;
+  line-height: $base-line-height;
+  i.fa{
+    width: 1em;
+    font-size: $base-font-size - 2px;
+    color: $base-border-color;
+    padding: 3px;
+  }
+  input{
+    flex:1;
+    border: none;
+
+    &:active,&:focus{
+      outline: none;
+    }
+  }
+}

@@ -17,7 +17,7 @@ var db = MongoClient.connect(url)
     })
     .catch(function(err) {
         console.error(err);
-    })
+    });
 commentsCollection.init(db,'comments');
   
 
@@ -31,25 +31,14 @@ app.use(function allowCrossDomain(req, res, next){
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
-})
+});
 
 app.get('/', function (req, res) {
     res.sendFile('index.html');
 });
 
-app.get('/comments',function (req, res) {
-    // res.sendFile('/comments.mock.json');
-    commentsCollection.filter({}).then(function( comments){
-        res.send(comments);
-    });
-     
-});
 
-app.post('/comments',function(req,res){
-    commentsCollection.insert(req.body).then(function(comment){
-        res.send(comment);
-    });
-})
+commentsCollection.routeRegister(app);
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')

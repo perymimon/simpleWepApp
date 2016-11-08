@@ -15,19 +15,19 @@ function pageCtrl($scope, Comments, $filter ){
     var filter = $filter('filter');
     var originalComments = [];
 
+    /*on scope*/
+    $scope.textFilter = '';
+    $scope.modelComment = {};
+
     /*API*/
     Object.assign(this,{
         postComment : postComment,
-        filterComments : filterComments
+        filterComments : localFilterComments,
+        getComments:getComments
     });
 
-    $scope.modelComment = {};
     /*get all comments from server*/
-    Comments.get().then(function (comments) {
-        originalComments = comments;
-        /*filter comments and assign to scope variable */
-        filterComments();
-    });
+    getComments();
 
     /* Implantation */
     function postComment() {
@@ -36,12 +36,23 @@ function pageCtrl($scope, Comments, $filter ){
         Comments.post(modelComment)
             .then(function (newComments) {
                 originalComments.push( ...newComments );
-                filterComments();
+                localFilterComments();
             })
             .catch( err => console.error(err) );
     }
 
-    function filterComments() {
+    function getComments(){
+        localFilterComments();
+        Comments.get($scope.textFilter).then(function (comments) {
+            originalComments = comments;
+
+            localFilterComments();
+        });
+    }
+    /**
+     * filter comments and assign to scope's variable
+     * */
+    function localFilterComments() {
         $scope.comments = filter( originalComments,$scope.textFilter);
     }
 }

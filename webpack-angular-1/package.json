@@ -2,7 +2,7 @@
   "scripts": {
     "start": "webpack-dev-server --content-base app --hot --watch",
     "build": "webpack -p --content-base app --config ./webpack.production.config.js",
-    "rest server": "node server/server",
+    "rest-server": "node server/server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "database": "mongod --dbpath=.\\database"
   },

@@ -19,22 +19,21 @@ behavior:
   * it should filter local comments as user press and send requst from server for new list  
   * when new comment sent to the server and ok return the new message should appear instantly in the comments list
    
-server is same one for all projects: 
+server is same one for all projects:  
 **simple node-express that use mongo for storage**
 
-for the webs app to work computer must have:
+**for REST server can work, computer must have:
 [node 6.9](https://nodejs.org/dist/v6.9.1/node-v6.9.1-x64.msi) and
-[mongo](https://www.mongodb.com/download-center?jmp=docs&_ga=1.55067691.1845113226.1478469911#community)
+[mongo](https://www.mongodb.com/download-center?jmp=docs&_ga=1.55067691.1845113226.1478469911#community)**
 
-before dive in and run one of the stack, install server dependency 
+before dive in and run one of the web stack, install server dependency 
 ```
  npm install
 ```
 
 and startup `mongod server` `REST server`    
 ```cmd
-
-   run-server.cmd
+   run-server
 ```
-preview:
+##### preview
 ![preview](/asset/preview.jpg)

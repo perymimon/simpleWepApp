@@ -3,7 +3,7 @@
 .vscode
 
 #database
-#*/database/*
+*/database/*
 
 #vendors
 node_modules

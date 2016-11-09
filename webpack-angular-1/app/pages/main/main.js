@@ -37,6 +37,8 @@ function pageCtrl($scope, Comments, $filter ){
             .then(function (newComments) {
                 originalComments.push( ...newComments );
                 localFilterComments();
+                $scope.commentForm.$setPristine();
+                $scope.commentForm.$setUntouched();
             })
             .catch( err => console.error(err) );
     }

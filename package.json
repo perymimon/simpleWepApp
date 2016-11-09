@@ -1,8 +1,7 @@
 {
   "scripts": {
     "rest-server": "node server/server",
-    "database": "mongod --dbpath=.\\database",
-    "postinstall":"cd webpack-angular-1 & npm install & cd.."
+    "database": "mongod --dbpath=.\\database"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

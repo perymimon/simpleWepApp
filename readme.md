@@ -36,10 +36,6 @@ and startup `mongod server` and  `REST server` by typing
    run-server
 ```
 
-then go into one of the folder that contain web-client-stack (etc : webpack-angular-1) and run
-```
-run
-```
 then move to one of the web-client-stack to continue: 
 * [webpack-angular 1](/webpack-angular-1) 
 

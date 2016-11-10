@@ -1,5 +1,9 @@
 /*common behavior*/
-.ng-touched.ng-invalid, .ng-submitted .ng-invalid{
+*{
+  box-sizing: border-box;
+}
+
+.ng-pristined.ng-invalid, .ng-submitted .ng-invalid{
   outline:1px solid red;
   background-color: #e2d3d0;
 }
@@ -11,7 +15,7 @@ button.main{
   border: none ;
   border-radius: 3px;
   color:white;
-  padding: 0.3em;
+  padding: 0.5em;
   &:active{
     transform: scale(0.9,0.9);
   }

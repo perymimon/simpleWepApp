@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "webpack-dev-server --content-base app --hot --watch",
+    "prestart":"start /max http://localhost:8080/index.dev.html",
+    "start": "webpack-dev-server --content-base app --config ./webpack.development.config.js --hot --watch",
     "build": "webpack -p --content-base app --config ./webpack.production.config.js",
     "rest-server": "node server/server",
     "test": "echo \"Error: no test specified\" && exit 1",

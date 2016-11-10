@@ -1,6 +1,6 @@
 echo off
-echo open browser and waiting to webpack
-start /max http://localhost:8080
+rem echo open browser and waiting to webpack
+rem start /max http://localhost:8080\index.dev.html
 echo startup webpack server
 npm start
 

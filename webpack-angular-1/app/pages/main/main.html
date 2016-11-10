@@ -1,12 +1,12 @@
 <div class="mainPage">
-    <form name="commentForm" class="content-card" novalidate >
+    <form name="commentForm" class="content-card" novalidate ng-submit="pageCtrl.postComment()">
         <input type="email" class="input-email" placeholder="Email" required
                ng-model="modelComment.email" >
 
         <textarea class="input-massage" placeholder="Massage" required
                   ng-model="modelComment.message"></textarea>
 
-        <button class="main submit" ng-click="pageCtrl.postComment()" >Submit</button>
+        <button class="main submit" >Submit</button>
     </form>
     <div class="comments-card">
         <input-filter >

@@ -32,13 +32,13 @@ function pageCtrl($scope, Comments, $filter ){
     /* Implantation */
     function postComment() {
         var modelComment = $scope.modelComment;
-        $scope.modelComment = {};
         Comments.post(modelComment)
             .then(function (newComments) {
                 originalComments.push( ...newComments );
                 localFilterComments();
                 $scope.commentForm.$setPristine();
                 $scope.commentForm.$setUntouched();
+                $scope.modelComment.message = '';
             })
             .catch( err => console.error(err) );
     }

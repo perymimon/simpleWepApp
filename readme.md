@@ -1,11 +1,11 @@
 # Simple Web App
 
-This project come to show how very basic web app, that show list of comments,
+This project come to show how very basic web app, that bring a list of comments,
  will look like in different modern client stack. for example :  
   
-  _task manger_ :**none, gulp, webpack, jspm** etc
-  _framwork_ : **angular 1, angular 2, react** etc
-  _javascript_: **ec5, ec2015**  
+  _task manger_ :~~**none**~~, ~~**gulp**~~, **webpack**, ~~**jspm**~~ etc  
+  _framwork_ : **angular 1**, ~~**angular 2**~~, ~~**react**~~ etc  
+  _javascript_: **ec5, ec2015**   
   
  css is fix and supply by `Scss` 
   
@@ -24,14 +24,14 @@ Server is same one for all projects:
 
 **For REST server can work, computer must have:
 [node 6.9](https://nodejs.org/dist/v6.9.1/node-v6.9.1-x64.msi) and
-[mongo](https://www.mongodb.com/download-center?jmp=docs&_ga=1.55067691.1845113226.1478469911#community)**
+[mongo DB](https://www.mongodb.com/download-center?jmp=docs&_ga=1.55067691.1845113226.1478469911#community)**
 
 Before dive in and run one of the web stack, install server dependency 
 ```
  npm install
 ```
 
-and startup `mongod server` and  `REST server` by typing    
+And startup `mongod server` and  `REST server` by typing    
 ```cmd
    run-server
 ```

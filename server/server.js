@@ -34,7 +34,8 @@ app.use(function allowCrossDomain(req, res, next){
 });
 
 app.get('/', function (req, res) {
-    res.sendFile('index.html');
+    res.status(400)
+       .send('Node is just for REST server. not for a static server. Use port 8080 instead');
 });
 
 
